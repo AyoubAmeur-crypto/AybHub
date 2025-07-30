@@ -1,41 +1,92 @@
-# 🔥 Smart Business Hub — Fullstack SaaS Platform
+# 🔥 AYB Hub — Smart Business Collaboration Platform
 
-A powerful, scalable SaaS solution designed to help small and medium businesses manage projects, teams, billing, and collaboration — all in one place.
+**AYB Hub** is a powerful and scalable fullstack SaaS solution built to help small and medium-sized teams manage projects, tasks, chats, clients, billing, and real-time collaboration — all from one unified platform.
+
+Built with performance, user experience, and modern DevOps in mind, AYB Hub is the ultimate workspace for agile teams and startups.
+
+---
 
 ## 📦 Tech Stack
 
-- **Frontend:** React.js, TailwindCSS, React Router, Axios
-- **Backend:** Node.js, Express.js, MongoDB (Mongoose), Socket.io
-- **Auth:** JWT, OAuth (Google, Facebook) 🔐
-- **Payments:** Stripe / PayPal
-- **DevOps:** Docker, Nginx, GitHub Actions
-- **Deployment:** Render / DigitalOcean / Railway
+| Layer        | Tech Used                                     |
+|--------------|-----------------------------------------------|
+| **Frontend** | React.js (Vite), TailwindCSS, React Router, Axios |
+| **Backend**  | Node.js, Express.js, MongoDB (Mongoose), Socket.io |
+| **Auth**     | JWT + OAuth (Google, Facebook) 🔐             |
+| **Payments** | Stripe / PayPal Integration 💳                 |
+| **DevOps**   | Docker, Docker Compose, NGINX, GitHub Actions |
+| **Deployment** | Hetzner VPS (Dockerized), CI/CD Ready         |
 
 ---
 
 ## 🧠 Core Features
 
-| Admin Panel                | Team/Clients Portal         | Shared Features           |
+| Admin Tools               | Team Collaboration         | Shared Features           |
 |---------------------------|-----------------------------|---------------------------|
-| Role Management           | Project & Task View         | Realtime Chat (Socket.io) |
-| Realtime Notifications    | Billing & Invoicing         | File Upload (Cloudinary)  |
-| Usage Monitoring (CPU, RAM) | Settings & Profile        | Dark/Light Mode UI        |
-| Analytics Dashboard       | Join/Leave Teams            | Activity Logs             |
+| 🛡️ Role Management         | 🧑‍🤝‍🧑 Team Creation & Join Requests | 💬 Realtime Chat (Socket.io) |
+| 🔔 Realtime Notifications  | ✅ Kanban Task Board         | 📁 File Uploads (Cloudinary) |
+| 📊 Analytics Dashboard     | 💼 Projects by Client        | 📅 Calendar & Deadlines     |
+| ⚙️ Profile & Settings      | 🗂️ Team/Project Switching     | 🌙 Dark/Light Mode          |
+| 🧾 Billing & Invoicing     | 🧠 Team Activity Logs         | 📨 Email Notifications       |
 
 ---
 
-## 📁 Project Structure (Frontend)
+## 📁 Project Structure
 
-├── components/ # Reusable UI
-├── features/ # Logic grouped by domain
-├── pages/ # Route pages
-├── layout/ # Sidebar, Header
-├── services/ # API calls (Axios)
-├── context/ # Global providers
-├── hooks/ # Custom logic
+### 🖥️ Frontend (React + Vite)
+
+├── components/ # Reusable UI Elements
+├── features/ # Logic grouped by domain (auth, team, etc.)
+├── pages/ # Page-level components
+├── layout/ # App shell (sidebar, navbar)
+├── hooks/ # Custom React hooks
+├── context/ # Global state using Context API
+├── services/ # Axios API requests
+├── assets/ # Icons, images, styles
 ├── App.jsx
 └── main.jsx
 
-## 📁 Project Structure (backend)
+### 🛠️ Backend (Node.js + Express)
 
-# OnGoing
+Server/
+├── controllers/ # Business logic for each route
+├── routes/ # Express routes (auth, team, project, chat)
+├── models/ # Mongoose models (User, Project, Task, Team)
+├── middlewares/ # Token verification, error handling, etc.
+├── config/ # DB, Cloudinary, email configs
+├── sockets/ # Realtime chat & notifications (Socket.io)
+├── utils/ # Reusable helpers (token, OTP, mailer)
+├── app.js
+└── server.js
+the app uses `.env` files for secure configuration.
+
+## Example:
+```env
+PORT=3000
+MONGO_URI=...
+TOKEN_KEY=...
+SESSION_KEY=...
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_SECRET=...
+FACEBOOK_APP_ID=...
+FACEBOOK_APP_SECRET=...
+EMAIL_SENDER=...
+EMAIL_PASS=...
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+
+ License
+This project is not open-source.
+All rights reserved © 2025 Ayoub Ameur.
+Please do not copy, modify, or redistribute any part of this codebase without written permission.
+
+✨ Credits
+Designed & developed by Ayoub Ameur
+💻 Fullstack Developer & 🎨 UI/UX Designer
+
+📬 Contact
+Want to hire me, collaborate, or ask about AYB Hub?
+
+📧 ayoubyameury@gmail.com
+🌍 www.linkedin.com/in/ayoubameur (optional)
